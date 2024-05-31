@@ -10,6 +10,7 @@ public class MoedasControl : MonoBehaviour
         {
             // Toda moeda dá 10 de score
             ScoreManager.instance.ColetaMoedas(10);
+            AudioManager.instance.SonsFXToca(0);
             Destroy(this.gameObject);
         }
     }

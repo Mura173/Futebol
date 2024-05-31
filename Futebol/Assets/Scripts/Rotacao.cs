@@ -112,5 +112,7 @@ public class Rotacao : MonoBehaviour
         liberaTiro = true;
 
         setaGO.SetActive(false);
+
+        AudioManager.instance.SonsFXToca(1);
     }
 }
