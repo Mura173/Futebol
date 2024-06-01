@@ -11,9 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject bola;
     private int bolasNum = 2;
-    private bool bolaMorreu = false;
+    // private bool bolaMorreu = false;
     private int bolasEmCena = 0;
     private Transform pos;
+
+    public int tiro = 0;
+
     void Awake()
     {
         if (instance == null)
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(bola, new Vector2(pos.position.x, pos.position.y), Quaternion.identity);
             bolasEmCena += 1;
+            tiro = 0;
         }
     }
 }

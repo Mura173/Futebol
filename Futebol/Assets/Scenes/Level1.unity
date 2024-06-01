@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 661780540}
   - component: {fileID: 661780539}
   m_Layer: 5
-  m_Name: Seta
+  m_Name: Canvas_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1540,7 +1540,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &661780542
 RectTransform:
@@ -1550,7 +1550,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661780538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1559,8 +1559,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 392, y: 220.5}
-  m_SizeDelta: {x: 784, y: 441}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &767438953
 GameObject:
@@ -2242,7 +2242,7 @@ Transform:
   m_GameObject: {fileID: 1022278983}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.67, y: -2.17, z: -5.827549}
+  m_LocalPosition: {x: -10.67, y: -2.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2461,7 +2461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1188661630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4146,7 +4146,7 @@ Transform:
   m_GameObject: {fileID: 2095194319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.27, y: -2.17, z: -5.827549}
+  m_LocalPosition: {x: 10.27, y: -2.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4326,8 +4326,8 @@ SceneRoots:
   - {fileID: 1022278985}
   - {fileID: 2095194321}
   - {fileID: 1958568427}
-  - {fileID: 661780542}
   - {fileID: 1209212736}
+  - {fileID: 661780542}
   - {fileID: 267466524368077445}
   - {fileID: 1628962325}
   - {fileID: 1723691463}
