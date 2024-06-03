@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
     // Bola
     [SerializeField]
     private GameObject bola;
-    private int bolasNum = 2;
+    public int bolasNum = 2;
     // private bool bolaMorreu = false;
     public int bolasEmCena = 0;
     public Transform pos;
 
     public int tiro = 0;
+
+    public bool win;
 
     void Awake()
     {
@@ -43,6 +45,16 @@ public class GameManager : MonoBehaviour
         UIManager.instance.UpdateUI();
 
         NascBolas();
+
+        if(bolasNum <= 0)
+        {
+            GameOver();
+        }
+
+        if(win == true)
+        {
+            WinGame();
+        }
     }
 
     void Carrega(Scene cena, LoadSceneMode modo)
@@ -58,5 +70,15 @@ public class GameManager : MonoBehaviour
             bolasEmCena += 1;
             tiro = 0;
         }
+    }
+
+    void GameOver()
+    {
+        UIManager.instance.GameOverUI();
+    }
+
+    void WinGame()
+    {
+        UIManager.instance.WinGameUI();
     }
 }

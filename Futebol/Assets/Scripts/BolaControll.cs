@@ -193,12 +193,14 @@ public class BolaControll : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.instance.bolasEmCena -= 1;
+            GameManager.instance.bolasNum -= 1;
         }
 
         if (this.gameObject.transform.position.x < paredeLE.position.x)
         {
             Destroy(this.gameObject);
             GameManager.instance.bolasEmCena -= 1;
+            GameManager.instance.bolasNum -= 1;
         }
     }
 
@@ -207,6 +209,13 @@ public class BolaControll : MonoBehaviour
         if (outro.gameObject.CompareTag("morte"))
         {
             Destroy(this.gameObject);
+            GameManager.instance.bolasEmCena -= 1;
+            GameManager.instance.bolasNum -= 1;
+        }
+
+        if (outro.gameObject.CompareTag("win"))
+        {
+            GameManager.instance.win = true;
         }
     }
 }

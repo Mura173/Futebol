@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &351988309
 RectTransform:
   m_ObjectHideFlags: 0
@@ -736,9 +736,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 8968419057735324760, guid: 3534cde46e494bb40acc1f6a5c5baeac, type: 3}
+  bolasNum: 2
   bolasEmCena: 0
   pos: {fileID: 0}
   tiro: 0
+  win: 0
 --- !u!1 &598202272
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &601439395
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1004,7 +1006,7 @@ GameObject:
   - component: {fileID: 614308205}
   - component: {fileID: 614308204}
   m_Layer: 5
-  m_Name: Moeda
+  m_Name: Bola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,7 +1100,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.213
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2218,7 +2220,7 @@ GameObject:
   - component: {fileID: 1026723138}
   - component: {fileID: 1026723137}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: cont
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3157,7 +3159,7 @@ GameObject:
   - component: {fileID: 1710236517}
   - component: {fileID: 1710236516}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3552,6 +3554,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pontosUI: {fileID: 0}
+  bolasUI: {fileID: 0}
+  losePainel: {fileID: 0}
+  winPainel: {fileID: 0}
+  pausePainel: {fileID: 0}
+  pauseBtn: {fileID: 0}
 --- !u!1 &1939301075
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,7 +3649,7 @@ GameObject:
   - component: {fileID: 1957141047}
   - component: {fileID: 1957141046}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: bolasUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4085,7 +4092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2119792776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4102,10 +4109,10 @@ RectTransform:
   - {fileID: 795668586}
   m_Father: {fileID: 1958568427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 536.84, y: 275.5}
-  m_SizeDelta: {x: 49.35, y: 44.64}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 117, y: 78}
+  m_SizeDelta: {x: 49.349976, y: 44.640015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2119792777
 Animator:
@@ -4119,7 +4126,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 569db1f0a7c0c0840b20134fb05a719c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -4181,6 +4188,10 @@ PrefabInstance:
     - target: {fileID: 1932331626520752135, guid: 89aee8852c02b724a99ff1a356208cd6, type: 3}
       propertyPath: m_SortingOrder
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550194545124418086, guid: 89aee8852c02b724a99ff1a356208cd6, type: 3}
+      propertyPath: m_TagString
+      value: win
       objectReference: {fileID: 0}
     - target: {fileID: 4236067765728805338, guid: 89aee8852c02b724a99ff1a356208cd6, type: 3}
       propertyPath: m_Name
