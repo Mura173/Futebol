@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     private GameObject bola;
     private int bolasNum = 2;
     // private bool bolaMorreu = false;
-    private int bolasEmCena = 0;
-    private Transform pos;
+    public int bolasEmCena = 0;
+    public Transform pos;
 
     public int tiro = 0;
 
