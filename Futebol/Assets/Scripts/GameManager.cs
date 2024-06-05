@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public int tiro = 0;
     public bool win;
 
-    public int ondeEstou;
+    // public int ondeEstou;
 
     public bool jogoComecou;
 
@@ -61,12 +61,12 @@ public class GameManager : MonoBehaviour
 
     void Carrega(Scene cena, LoadSceneMode modo)
     {
-        pos = GameObject.Find("posStart").GetComponent<Transform>();
 
-        // Pegar o índice da fase
-        ondeEstou = SceneManager.GetActiveScene().buildIndex;
-
-        StartGame();
+        if (OndeEstou.instance.fase != 4)
+        {
+            pos = GameObject.Find("posStart").GetComponent<Transform>();
+            StartGame();
+        }
     }
 
     void NascBolas()
@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
         jogoComecou = true;
         bolasNum = 2;
         bolasEmCena = 0;
+        win = false;
         UIManager.instance.StartUI();
     }
 }

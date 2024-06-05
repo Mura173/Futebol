@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 543969661}
   - component: {fileID: 543969660}
   m_Layer: 5
-  m_Name: novamentewin
+  m_Name: novamenteWIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -798,7 +798,6 @@ MonoBehaviour:
   pos: {fileID: 0}
   tiro: 0
   win: 0
-  ondeEstou: 0
   jogoComecou: 0
 --- !u!1 &598202272
 GameObject:
@@ -945,7 +944,7 @@ GameObject:
   - component: {fileID: 612603872}
   - component: {fileID: 612603871}
   m_Layer: 5
-  m_Name: MenuFases
+  m_Name: MenuFasesLOSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,7 +2049,7 @@ GameObject:
   - component: {fileID: 927042970}
   - component: {fileID: 927042969}
   m_Layer: 5
-  m_Name: novamentelose
+  m_Name: novamenteLOSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3460,7 +3459,7 @@ GameObject:
   - component: {fileID: 1788834630}
   - component: {fileID: 1788834629}
   m_Layer: 5
-  m_Name: MenuFases
+  m_Name: MenuFasesWIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3676,8 +3675,8 @@ MonoBehaviour:
   pausePainel: {fileID: 0}
   pauseBtn: {fileID: 0}
   pauseBtn_Return: {fileID: 0}
-  novamenteBTN: {fileID: 0}
-  levelBTN: {fileID: 0}
+  novamenteBTNLOSE: {fileID: 0}
+  levelBTNLOSE: {fileID: 0}
   moedasNumAntes: 0
   moedasNumDepois: 0
   resultado: 0

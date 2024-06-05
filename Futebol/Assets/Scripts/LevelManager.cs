@@ -21,6 +21,12 @@ public class LevelManager : MonoBehaviour
     public Transform localBtn;
     public List<Level> levelList;
 
+    void Awake()
+    {
+        Destroy(GameObject.Find("UIManager"));
+        Destroy(GameObject.Find("GameManager"));
+    }
+
     void Start()
     {
         ListaAdd();
