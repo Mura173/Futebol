@@ -35,10 +35,17 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        SceneManager.sceneLoaded += Carrega;       
+        SceneManager.sceneLoaded += Carrega;
+
+        PegaDados();
     }
 
     void Carrega(Scene cena, LoadSceneMode modo)
+    {
+        PegaDados();
+    }
+
+    void PegaDados()
     {
         if (OndeEstou.instance.fase != 4)
         {

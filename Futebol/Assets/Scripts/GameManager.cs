@@ -34,10 +34,14 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += Carrega;
+
+        pos = GameObject.Find("posStart").GetComponent<Transform>();
+
     }
 
     void Start()
     {
+        StartGame();
         ScoreManager.instance.GameStartScoreM();
     }
 

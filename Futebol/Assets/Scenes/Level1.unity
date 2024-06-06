@@ -527,11 +527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748701481577889952, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.04
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 3748701481577889952, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27
+      value: -1.44
       objectReference: {fileID: 0}
     - target: {fileID: 3748701481577889952, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -748,57 +748,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543969658}
   m_CullTransparentMesh: 1
---- !u!1 &558432745
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 558432746}
-  - component: {fileID: 558432747}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &558432746
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558432745}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.76, y: 1.02, z: -13.562669}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &558432747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558432745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683cb43fa07573246a371252bcc3939f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bola: {fileID: 8968419057735324760, guid: 3534cde46e494bb40acc1f6a5c5baeac, type: 3}
-  bolasNum: 2
-  bolasEmCena: 0
-  pos: {fileID: 0}
-  tiro: 0
-  win: 0
-  jogoComecou: 0
 --- !u!1 &598202272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,11 +3352,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748701481577889952, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3748701481577889952, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 3748701481577889952, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3624,62 +3573,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f357af7e19c420e46851d21c4a3a76c2, type: 3}
---- !u!1 &1880665995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1880665996}
-  - component: {fileID: 1880665997}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1880665996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880665995}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.92, y: 1.99, z: -13.578674}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1880665997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880665995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 587b95672d88e1d4c9ae1573e759baaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pontosUI: {fileID: 0}
-  bolasUI: {fileID: 0}
-  losePainel: {fileID: 0}
-  winPainel: {fileID: 0}
-  pausePainel: {fileID: 0}
-  pauseBtn: {fileID: 0}
-  pauseBtn_Return: {fileID: 0}
-  novamenteBTNLOSE: {fileID: 0}
-  levelBTNLOSE: {fileID: 0}
-  moedasNumAntes: 0
-  moedasNumDepois: 0
-  resultado: 0
 --- !u!1 &1939301075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,6 +4277,4 @@ SceneRoots:
   - {fileID: 1755589854}
   - {fileID: 487902561}
   - {fileID: 1829329638}
-  - {fileID: 1880665996}
-  - {fileID: 558432746}
   - {fileID: 637059559}
