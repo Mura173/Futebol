@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8404067242937304418}
   - component: {fileID: 4699132009138973492}
   - component: {fileID: 3516185477678411297}
-  - component: {fileID: 8654100380420872545}
+  - component: {fileID: 985342688184977630}
   m_Layer: 0
   m_Name: Espeto_Menor
   m_TagString: Untagged
@@ -187,7 +187,7 @@ SliderJoint2D:
   m_TranslationLimits:
     m_LowerTranslation: -1
     m_UpperTranslation: 1
---- !u!114 &8654100380420872545
+--- !u!114 &985342688184977630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

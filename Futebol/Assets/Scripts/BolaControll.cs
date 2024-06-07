@@ -24,6 +24,10 @@ public class BolaControll : MonoBehaviour
     // Parede
     private Transform paredeLE, paredeLD;
 
+    // MorteBola Anim
+    [SerializeField]
+    private GameObject morteBolaAnim;
+
     void Awake()
     {     
         setaGO = GameObject.Find("Seta");
@@ -208,6 +212,7 @@ public class BolaControll : MonoBehaviour
     {
         if (outro.gameObject.CompareTag("morte"))
         {
+            Instantiate(morteBolaAnim, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             GameManager.instance.bolasEmCena -= 1;
             GameManager.instance.bolasNum -= 1;
