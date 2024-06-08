@@ -1309,17 +1309,17 @@ MonoBehaviour:
     desbloqueado: 1
     txtAtivo: 1
   - levelText: 2
-    habilitado: 0
+    habilitado: 1
     desbloqueado: 0
-    txtAtivo: 0
+    txtAtivo: 1
   - levelText: 3
-    habilitado: 0
-    desbloqueado: 0
-    txtAtivo: 0
+    habilitado: 1
+    desbloqueado: 1
+    txtAtivo: 1
   - levelText: 4
-    habilitado: 0
-    desbloqueado: 0
-    txtAtivo: 0
+    habilitado: 1
+    desbloqueado: 1
+    txtAtivo: 1
 --- !u!4 &1543676955
 Transform:
   m_ObjectHideFlags: 0
