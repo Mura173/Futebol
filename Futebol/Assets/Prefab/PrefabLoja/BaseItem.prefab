@@ -259,7 +259,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3785544203307153719}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -324,10 +324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6a575b78ebfea4c8698b49827079fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bolaPreco: {fileID: 0}
-  bolaSprite: {fileID: 0}
+  bolaPreco: {fileID: 2593393987359312725}
+  bolaSprite: {fileID: 8443536641323650516}
   bolaID: 0
-  btnCompra: {fileID: 0}
+  btnCompra: {fileID: 8222163411214139590}
 --- !u!1 &8222163411214139590
 GameObject:
   m_ObjectHideFlags: 0
