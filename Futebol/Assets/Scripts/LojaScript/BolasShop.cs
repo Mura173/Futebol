@@ -7,6 +7,7 @@ public class BolasShop : MonoBehaviour
     public static BolasShop instance;
 
     public List<Bolas> bolasList = new List<Bolas>();
+    public List<GameObject> bolaSuporteList = new List<GameObject>();
 
     public GameObject baseBolaItem;
     public Transform conteudo;
@@ -41,6 +42,8 @@ public class BolasShop : MonoBehaviour
             item.bolaID = b.bolasID;
             item.bolaPreco.text = b.bolasPreco.ToString();
 
+            // Lista bolaSuporteList
+
             if(b.bolasComprou == true)
             {
                 item.bolaSprite.sprite = Resources.Load<Sprite>("SpritesBola/" + b.bolasNomeSprite);
@@ -48,6 +51,32 @@ public class BolasShop : MonoBehaviour
             else
             {
                 item.bolaSprite.sprite = Resources.Load<Sprite>("SpritesBola/" + b.bolasNomeSprite + "_cinza");
+            }
+        }
+    }
+
+    void UpdateSprite(int bola_id)
+    {
+        for(int i = 0; i < bolaSuporteList.Count; i++)
+        {
+            BolasSuporte bolasSuporteScript = bolaSuporteList[i].GetComponent<BolasSuporte>();
+            
+            if(bolasSuporteScript.bolaID == bola_id)
+            {
+                for(int j = 0; j < bolasList.Count; j++)
+                {
+                    if(bolasList[j].bolasID == bola_id)
+                    {
+                        if(bolasList[j].bolasComprou == true)
+                        {
+                            bolasSuporteScript.bolaSprite.sprite = Resources.Load<Sprite>("SpritesBola/" + bolasList[j].bolasNomeSprite);
+                        }
+                        else
+                        {
+                            bolasSuporteScript.bolaSprite.sprite = Resources.Load<Sprite>("SpritesBola/" + bolasList[j].bolasNomeSprite + "_cinza");
+                        }
+                    }
+                }
             }
         }
     }
