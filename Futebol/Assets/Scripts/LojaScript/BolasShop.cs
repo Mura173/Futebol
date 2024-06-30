@@ -8,6 +8,7 @@ public class BolasShop : MonoBehaviour
 
     public List<Bolas> bolasList = new List<Bolas>();
     public List<GameObject> bolaSuporteList = new List<GameObject>();
+    public List<GameObject> compraBtnList = new List<GameObject>();
 
     public GameObject baseBolaItem;
     public Transform conteudo;
@@ -43,6 +44,10 @@ public class BolasShop : MonoBehaviour
             item.bolaID = b.bolasID;
             item.bolaPreco.text = b.bolasPreco.ToString();
             item.btnCompra.GetComponent<CompraBola>().bolasIDe = b.bolasID;
+
+            // Lista CompraBtn
+
+            compraBtnList.Add(item.btnCompra);
 
             // Lista bolaSuporteList
 

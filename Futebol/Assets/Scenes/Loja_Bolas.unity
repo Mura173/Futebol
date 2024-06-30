@@ -827,6 +827,7 @@ MonoBehaviour:
     bolasPreco: 5000
     bolasComprou: 0
   bolaSuporteList: []
+  compraBtnList: []
   baseBolaItem: {fileID: 3785544203307153719, guid: ee87b3f7e51db424e84fcceb7caecd98, type: 3}
   conteudo: {fileID: 975326415}
 --- !u!1 &1077197405
