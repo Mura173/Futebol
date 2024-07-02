@@ -53,6 +53,11 @@ public class BolasShop : MonoBehaviour
 
             bolaSuporteList.Add(itensBola);
 
+            if (PlayerPrefs.GetInt("BTN" + item.bolaID) == 1)
+            {
+                b.bolasComprou = true;
+            }
+
             if(b.bolasComprou == true)
             {
                 item.bolaSprite.sprite = Resources.Load<Sprite>("SpritesBola/" + b.bolasNomeSprite);
@@ -81,6 +86,7 @@ public class BolasShop : MonoBehaviour
                         {
                             bolasSuporteScript.bolaSprite.sprite = Resources.Load<Sprite>("SpritesBola/" + bolasList[j].bolasNomeSprite);
                             bolasSuporteScript.bolaPreco.text = "Comprado!";
+                            SalvaBolasLojaInfo(bolasSuporteScript.bolaID);
                         }
                         else
                         {
@@ -88,6 +94,19 @@ public class BolasShop : MonoBehaviour
                         }
                     }
                 }
+            }
+        }
+    }
+
+    void SalvaBolasLojaInfo(int idBola)
+    {
+        for (int i = 0; i < bolasList.Count; i++)
+        {
+            BolasSuporte bolasSup = bolaSuporteList [i].GetComponent<BolasSuporte>();
+
+            if (bolasSup.bolaID == idBola)
+            {
+                PlayerPrefs.SetInt("BTN" + bolasSup.bolaID, bolasSup.btnCompra ? 1 : 0);
             }
         }
     }
