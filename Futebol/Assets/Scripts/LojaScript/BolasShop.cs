@@ -23,7 +23,7 @@ public class BolasShop : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         FillList();
 
     }

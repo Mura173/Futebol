@@ -8,15 +8,25 @@ public class CompraBola : MonoBehaviour
     public int bolasIDe;
     public Text btnText;
 
+    private GameObject txtMoedas;
+
     public void CompraBolaBtn()
     {
         for (int i = 0; i < BolasShop.instance.bolasList.Count; i++)
         {
-            if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && !BolasShop.instance.bolasList[i].bolasComprou)
+            if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && !BolasShop.instance.bolasList[i].bolasComprou && PlayerPrefs.GetInt("moedasSave") >= BolasShop.instance.bolasList[i].bolasPreco)
             {
                 BolasShop.instance.bolasList[i].bolasComprou = true;
                 UpdateCompraBtn();
+                ScoreManager.instance.PerdeMoedas(BolasShop.instance.bolasList[i].bolasPreco);
+                GameObject.Find("UITextCoin").GetComponent<Text>().text = PlayerPrefs.GetInt("moedasSave").ToString();
             }
+
+            else if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && !BolasShop.instance.bolasList[i].bolasComprou && PlayerPrefs.GetInt("moedasSave") <= BolasShop.instance.bolasList[i].bolasPreco)
+            {
+                print("falido");
+            }
+
             else if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && BolasShop.instance.bolasList[i].bolasComprou)
             {
                 UpdateCompraBtn();

@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 1204145484}
   - component: {fileID: 1204145483}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: UITextCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

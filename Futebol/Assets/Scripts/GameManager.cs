@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
+
         StartGame();
         ScoreManager.instance.GameStartScoreM();
     }
