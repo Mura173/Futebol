@@ -36,10 +36,17 @@ public class CompraBola : MonoBehaviour
 
             for (int j = 0; j < BolasShop.instance.bolasList.Count; j++)
             {
+                if (BolasShop.instance.bolasList[j].bolasID == compraBolaScript.bolasIDe)
+                {
+                    BolasShop.instance.SalvaBolasLojaText(compraBolaScript.bolasIDe, "Usando");
+                }
+
                 if (BolasShop.instance.bolasList[j].bolasID == compraBolaScript.bolasIDe &&
                     BolasShop.instance.bolasList[j].bolasComprou && BolasShop.instance.bolasList[j].bolasID != bolasIDe)
                 {
                     compraBolaScript.btnText.text = "Use";
+
+                    BolasShop.instance.SalvaBolasLojaText(compraBolaScript.bolasIDe, "Use");
                 }
             }
         }
