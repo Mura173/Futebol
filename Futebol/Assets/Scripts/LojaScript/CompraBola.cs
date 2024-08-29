@@ -22,7 +22,7 @@ public class CompraBola : MonoBehaviour
                 GameObject.Find("UITextCoin").GetComponent<Text>().text = PlayerPrefs.GetInt("moedasSave").ToString();
             }
 
-            else if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && !BolasShop.instance.bolasList[i].bolasComprou && PlayerPrefs.GetInt("moedasSave") <= BolasShop.instance.bolasList[i].bolasPreco)
+            else if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && !BolasShop.instance.bolasList[i].bolasComprou && PlayerPrefs.GetInt("moedasSave") < BolasShop.instance.bolasList[i].bolasPreco)
             {
                 print("falido");
             }

@@ -7,6 +7,7 @@ public class UIManagerLevels : MonoBehaviour
 {
     [SerializeField]
     private Text moedasLevel;
+
     void Start()
     {
         ScoreManager.instance.UpdateScore();

@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 797644445}
   - component: {fileID: 797644444}
   - component: {fileID: 797644447}
+  - component: {fileID: 797644448}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -593,6 +594,63 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &797644448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797644443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3709994631093a444bfb291f992d73cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &848279660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848279662}
+  - component: {fileID: 848279661}
+  m_Layer: 0
+  m_Name: UIManagerLevels
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &848279661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848279660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ef6259a14261742b90d43295192000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moedasLevel: {fileID: 1204145484}
+--- !u!4 &848279662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848279660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.63, y: -1.49, z: 683.61975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912772901
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LOJA
+  m_Text: MENU
 --- !u!222 &912772905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -808,15 +866,15 @@ MonoBehaviour:
     bolasComprou: 1
   - bolasID: 1
     bolasNomeSprite: argelia
-    bolasPreco: 500
+    bolasPreco: 5
     bolasComprou: 0
   - bolasID: 2
     bolasNomeSprite: brasil
-    bolasPreco: 1500
+    bolasPreco: 10
     bolasComprou: 0
   - bolasID: 3
     bolasNomeSprite: argentina
-    bolasPreco: 2000
+    bolasPreco: 20
     bolasComprou: 0
   - bolasID: 4
     bolasNomeSprite: camaroes
@@ -1150,7 +1208,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1596056360}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 797644448}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: MenuGo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1596056360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,3 +1266,4 @@ SceneRoots:
   - {fileID: 797644446}
   - {fileID: 458570477}
   - {fileID: 1546807496}
+  - {fileID: 848279662}
