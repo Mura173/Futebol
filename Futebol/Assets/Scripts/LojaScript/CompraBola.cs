@@ -9,6 +9,7 @@ public class CompraBola : MonoBehaviour
     public Text btnText;
 
     private GameObject txtMoedas;
+    private Animator falido;
 
     public void CompraBolaBtn()
     {
@@ -24,7 +25,8 @@ public class CompraBola : MonoBehaviour
 
             else if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && !BolasShop.instance.bolasList[i].bolasComprou && PlayerPrefs.GetInt("moedasSave") < BolasShop.instance.bolasList[i].bolasPreco)
             {
-                print("falido");
+                falido = GameObject.FindGameObjectWithTag("Falido").GetComponent<Animator>();
+                falido.Play("FalidoAnim");
             }
 
             else if (BolasShop.instance.bolasList[i].bolasID == bolasIDe && BolasShop.instance.bolasList[i].bolasComprou)
@@ -49,6 +51,13 @@ public class CompraBola : MonoBehaviour
                 if (BolasShop.instance.bolasList[j].bolasID == compraBolaScript.bolasIDe)
                 {
                     BolasShop.instance.SalvaBolasLojaText(compraBolaScript.bolasIDe, "Usando");
+
+                    if (BolasShop.instance.bolasList[j].bolasID == compraBolaScript.bolasIDe &&
+                        BolasShop.instance.bolasList[j].bolasComprou && BolasShop.instance.bolasList[j].bolasID == bolasIDe)
+                    {
+                        OndeEstou.instance.bolaEmUso = compraBolaScript.bolasIDe;
+                        PlayerPrefs.SetInt("BolaUse", compraBolaScript.bolasIDe);
+                    }
                 }
 
                 if (BolasShop.instance.bolasList[j].bolasID == compraBolaScript.bolasIDe &&
@@ -60,5 +69,11 @@ public class CompraBola : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void falidoInverse()
+    {
+        falido = GameObject.FindGameObjectWithTag("Falido").GetComponent<Animator>();
+        falido.Play("FalidoAnimInverse");
     }
 }
