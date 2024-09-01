@@ -8,6 +8,8 @@ TagManager:
   - morte
   - win
   - Falido
+  - BarraAnim
+  - MenuInfo
   layers:
   - Default
   - TransparentFX
