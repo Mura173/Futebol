@@ -33,7 +33,7 @@ public class OndeEstou : MonoBehaviour
     {
         fase = SceneManager.GetActiveScene().buildIndex;
 
-        if(fase != 4 && fase != 5)
+        if(fase != 4 && fase != 5 && fase != 6)
         {
             Instantiate(uiManagerGO);
             Instantiate(gameManagerGO);
