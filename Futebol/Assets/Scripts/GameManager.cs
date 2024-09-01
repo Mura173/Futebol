@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     void Carrega(Scene cena, LoadSceneMode modo)
     {
 
-        if (OndeEstou.instance.fase != 4)
+        if (OndeEstou.instance.fase != 0)
         {
             pos = GameObject.Find("posStart").GetComponent<Transform>();
             StartGame();

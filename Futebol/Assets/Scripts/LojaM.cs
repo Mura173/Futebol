@@ -7,6 +7,6 @@ public class LojaM : MonoBehaviour
 {
     public void LojaGo()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(2);
     }
 }

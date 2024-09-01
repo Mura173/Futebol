@@ -21,7 +21,7 @@ public class CameraSegue : MonoBehaviour
 
             if (bola == null && GameManager.instance.bolasEmCena > 0)
             {
-                bola = GameObject.Find("bola(Clone)").GetComponent<Transform>();
+                bola = GameObject.FindGameObjectWithTag("bola").GetComponent<Transform>();
             }
             else if (GameManager.instance.bolasEmCena > 0)
             {

@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     private GameObject losePainel, winPainel, pausePainel;
     [SerializeField]
     private Button pauseBtn, pauseBtn_Return;
+    private Button restartBtn;
 
     // You Lose
     [SerializeField]
@@ -47,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     void PegaDados()
     {
-        if (OndeEstou.instance.fase != 4)
+        if (OndeEstou.instance.fase !<= 2)
         {
             // Elementos UI Pontos e Bolas
             pontosUI = GameObject.Find("PontosUI").GetComponent<Text>();
@@ -61,6 +62,9 @@ public class UIManager : MonoBehaviour
             // Botões Pause
             pauseBtn = GameObject.Find("pause").GetComponent<Button>();
             pauseBtn_Return = GameObject.Find("cont").GetComponent<Button>();
+
+            // Botao Reiniciar
+            restartBtn = GameObject.Find("Restart").GetComponent<Button>();
 
             // Botões Lose
             novamenteBTNLOSE = GameObject.Find("novamenteLOSE").GetComponent<Button>();
@@ -171,12 +175,12 @@ public class UIManager : MonoBehaviour
             resultado = moedasNumDepois - moedasNumAntes;
             ScoreManager.instance.PerdeMoedas(resultado);
             resultado = 0;
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(1);
         }
         else
         {
             resultado = 0;
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(1);
         }
     }
 
