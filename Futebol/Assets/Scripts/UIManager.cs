@@ -48,32 +48,32 @@ public class UIManager : MonoBehaviour
 
     void PegaDados()
     {
-        if (OndeEstou.instance.fase !<= 2)
+        if (OndeEstou.instance.fase >= 3)
         {
             // Elementos UI Pontos e Bolas
-            pontosUI = GameObject.Find("PontosUI").GetComponent<Text>();
-            bolasUI = GameObject.Find("bolasUI").GetComponent<Text>();
+            pontosUI = GameObject.FindGameObjectWithTag("PontosUI").GetComponent<Text>();
+            bolasUI = GameObject.FindGameObjectWithTag("bolasUI").GetComponent<Text>();
 
             // Paineis
-            losePainel = GameObject.Find("Lose_Panel");
-            winPainel = GameObject.Find("Win_Panel");
-            pausePainel = GameObject.Find("Pause_Panel");
+            losePainel = GameObject.FindGameObjectWithTag("Lose_Panel");
+            winPainel = GameObject.FindGameObjectWithTag("Win_Panel");
+            pausePainel = GameObject.FindGameObjectWithTag("Pause_Panel");
 
             // Botões Pause
-            pauseBtn = GameObject.Find("pause").GetComponent<Button>();
-            pauseBtn_Return = GameObject.Find("cont").GetComponent<Button>();
+            pauseBtn = GameObject.FindGameObjectWithTag("pause").GetComponent<Button>();
+            pauseBtn_Return = GameObject.FindGameObjectWithTag("cont").GetComponent<Button>();
 
             // Botao Reiniciar
-            restartBtn = GameObject.Find("Restart").GetComponent<Button>();
+            restartBtn = GameObject.FindGameObjectWithTag("Restart").GetComponent<Button>();
 
             // Botões Lose
-            novamenteBTNLOSE = GameObject.Find("novamenteLOSE").GetComponent<Button>();
-            levelBTNLOSE = GameObject.Find("MenuFasesLOSE").GetComponent<Button>();
+            novamenteBTNLOSE = GameObject.FindGameObjectWithTag("novamenteLOSE").GetComponent<Button>();
+            levelBTNLOSE = GameObject.FindGameObjectWithTag("MenuFasesLOSE").GetComponent<Button>();
 
             // Botões Win
-            levelBTNWIN = GameObject.Find("MenuFasesWIN").GetComponent<Button>();
-            novamenteBTNWIN = GameObject.Find("novamenteWIN").GetComponent<Button>();
-            avancaBTNWIN = GameObject.Find("avancar").GetComponent<Button>();
+            levelBTNWIN = GameObject.FindGameObjectWithTag("MenuFasesWIN").GetComponent<Button>();
+            novamenteBTNWIN = GameObject.FindGameObjectWithTag("novamenteWIN").GetComponent<Button>();
+            avancaBTNWIN = GameObject.FindGameObjectWithTag("avancar").GetComponent<Button>();
 
             // Eventos
 
@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
             novamenteBTNLOSE.onClick.AddListener(JogarNovamente);
             levelBTNLOSE.onClick.AddListener(Levels);
 
-            // Eventos You Lose
+            // Eventos You Win
             novamenteBTNWIN.onClick.AddListener(JogarNovamente);
             levelBTNWIN.onClick.AddListener(Levels);
             avancaBTNWIN.onClick.AddListener(ProximaFase);

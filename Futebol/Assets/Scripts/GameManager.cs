@@ -11,13 +11,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public GameObject[] bola;
     public int bolasNum = 2;
-    // private bool bolaMorreu = false;
     public int bolasEmCena = 0;
     public Transform pos;
     public int tiro = 0;
     public bool win;
-
-    // public int ondeEstou;
 
     public bool jogoComecou;
 
@@ -41,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
 
         StartGame();
         ScoreManager.instance.GameStartScoreM();
@@ -54,21 +51,26 @@ public class GameManager : MonoBehaviour
 
         NascBolas();
 
-        if(bolasNum <= 0)
+        if(bolasNum <= 0 && win == false)
         {
             GameOver();
         }
 
-        if(win == true)
+        if (win == true)
         {
             WinGame();
+        }
+
+        if (win == false)
+        {
+            NascBolas();
         }
     }
 
     void Carrega(Scene cena, LoadSceneMode modo)
     {
 
-        if (OndeEstou.instance.fase != 0)
+        if (OndeEstou.instance.fase >= 3)
         {
             pos = GameObject.Find("posStart").GetComponent<Transform>();
             StartGame();

@@ -10,6 +10,8 @@ public class UIManagerLevels : MonoBehaviour
 
     void Start()
     {
+        // PlayerPrefs.DeleteAll();
+
         ScoreManager.instance.UpdateScore();
         moedasLevel.text = PlayerPrefs.GetInt("moedasSave").ToString();
     }

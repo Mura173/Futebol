@@ -10,6 +10,19 @@ TagManager:
   - Falido
   - BarraAnim
   - MenuInfo
+  - PontosUI
+  - bolasUI
+  - Lose_Panel
+  - Win_Panel
+  - Pause_Panel
+  - pause
+  - cont
+  - Restart
+  - novamenteLOSE
+  - MenuFasesLOSE
+  - MenuFasesWIN
+  - novamenteWIN
+  - avancar
   layers:
   - Default
   - TransparentFX
